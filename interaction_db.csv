@@ -1,0 +1,13 @@
+﻿성분1,성분2,판정,이유
+ibuprofen,aspirin,위험,"심혈관 보호 작용 감소, 위자극"
+naproxen,aspirin,위험,"심혈관 보호 작용 감소, 위자극"
+naproxen,ibuprofen,위험,위장관 궤양과 출혈 등 중증의 위장관계 이상 위험 증가
+naproxen,dexibuprofen,위험,위장관 궤양과 출혈 등 중증의 위장관계 이상 위험 증가
+warfarin,aspirin,위험,"항응고 효과 증가로 인한 출혈, 부작용 발생 위험 증가"
+ciprofloxacin,magnesium hydroxide,위험,"약리적 효과 감소, 특화된 안내서로 상담 필요"
+loperamide hydrochloride,itraconazole,주의,"부작용 위험 증가, 모니터링 필요"
+acetaminophen,lamotrigine,주의,치료효과 감소될 수 있음
+famotidine,magnesium hydroxide,주의,약리적 효과 감소가 있으나 임상적 간섭 필요 없으며 시간간격 필요
+ibuprofen,famotidine,안전,특별한 임상적 간섭 필요 없음
+ibuprofen,nizatidine,안전,특별한 임상적 간섭 필요 없음
+naproxen,cimetidine,안전,특별한 임상적 간섭 필요 없음
