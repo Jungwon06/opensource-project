@@ -8,11 +8,21 @@ MODEL_PATH = 'best_pill_model.pth'
 def run_system(img_path1, img_path2):
     print("시스템 초기화 중...")
     
+    # 1. 모델 가중치 파일 존재 여부 확인
     if not os.path.exists(MODEL_PATH):
         print(f"오류: 모델 가중치 파일({MODEL_PATH})을 찾을 수 없습니다.")
         return
 
-    # 모델과 진짜 CSV 파일 로드
+    # 2. 입력받은 알약 이미지 파일이 실제로 있는지 검사!
+    if not os.path.exists(img_path1):
+        print(f"오류: 첫 번째 알약 사진('{img_path1}')을 찾을 수 없습니다. 경로와 파일명을 다시 확인해 주세요.")
+        return
+        
+    if not os.path.exists(img_path2):
+        print(f"오류: 두 번째 알약 사진('{img_path2}')을 찾을 수 없습니다. 경로와 파일명을 다시 확인해 주세요.")
+        return
+
+    # 3. 파일들이 모두 존재하면 정상적으로 모델과 DB 로드
     model = load_model(MODEL_PATH)
     checker = InteractionChecker('interaction_db.csv') 
     
