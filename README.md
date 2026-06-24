@@ -1,4 +1,21 @@
 # opensource-project
+
+# 실행 방법
+
+1. 필요한 라이브러리 설치
+pip install torch torchvision pillow pandas
+2. 프로그램 실행
+python main.py <알약이미지1> <알약이미지2>
+예시
+python main.py pill1.png pill2.png
+
+# 시스템 동작 순서
+
+1. 사용자가 두 개의 알약 이미지를 입력
+2. inference.py가 ResNet50 모델을 이용하여 약물명을 예측
+3. danger_check.py가 interaction_db.csv를 조회하여 상호작용 여부를 확인
+4. 최종 판정 결과(위험/주의/안전)와 사유를 출력
+
 # 의약품 상호작용 검사 모듈 (Interaction Checker)
 담당: 허선우(2412674)
 
@@ -54,11 +71,19 @@
   - Brightness Adjustment
   - Zoom
 
+## 추가 작업
+
+- Google Colab 환경에서 학습 코드를 실행하여 최종 모델 가중치(best_pill_model.pth) 생성
+- 추론 모듈(inference.py) 구현
+- 메인 시스템(main.py)과 연동하여 시스템 통합 테스트 및 시연 수행
+
 ## 파일 설명
 
-- `rename_files.py` : 이미지 파일명 자동 변경
-- `count_images.py` : 클래스별 이미지 개수 확인
-- `preprocess.py` : 데이터 전처리 및 증강 수행
+- rename_files.py : 이미지 파일명 자동 변경
+- count_images.py : 클래스별 이미지 개수 확인
+- preprocess.py : 데이터 전처리 및 증강 수행
+- inference.py : 학습된 모델을 이용하여 입력된 알약 이미지를 분류
+- best_pill_model.pth : 학습 완료 후 생성된 최종 모델 가중치 파일
 
 ## 결과 데이터 구조
 processed_dataset/
