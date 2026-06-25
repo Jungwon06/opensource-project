@@ -16,7 +16,7 @@ python main.py pill1.png pill2.png
 3. danger_check.py가 interaction_db.csv를 조회하여 상호작용 여부를 확인
 4. 최종 판정 결과(위험/주의/안전)와 사유를 출력
 
-# 의약품 상호작용 검사 모듈 (Interaction Checker)
+# 의약품 상호작용 검사 모듈 (Interaction Checker) 및 통합(main)
 담당: 허선우(2412674)
 
 ## 개요
